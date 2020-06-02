@@ -7,9 +7,9 @@ export class AppService {
   constructor(
     @Inject(WINSTON_MODULE_PROVIDER) private readonly logger: Logger) { }
 
+  //log received message into a json file
   async getMessage(error: any) {
     this.logger.log('error', error);
   }
-
 
 }

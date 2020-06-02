@@ -6,10 +6,11 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) { }
 
+  // process the error message sent from service A and log it into 'error-report.json'
   @Post()
   async saveErrResponse(@Body() error: any) {
-  return this.appService.getMessage(error);
+    return this.appService.getMessage(error);
   }
-  
+
 }
 
